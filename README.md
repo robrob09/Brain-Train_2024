@@ -1,4 +1,67 @@
-# Brain Train
+# ENG:
+
+## Brain Train
+
+The project was carried out as part of the Creative Radio Electronics supplementary general education program at the Academy of Digital Technologies (2023–2024).
+
+**Brain Train** is an interactive memory trainer based on *Arduino Nano*, designed to train attention, short-term memory, and accuracy. During the test, the user observes randomly selected $n$ LEDs that start to light up. Then, they must reproduce this sequence by pressing the corresponding blue buttons (*S*). The red control buttons (*MS*) are used to start, cancel, give hints, and reset.
+
+Next, we will discuss $n=6$ LEDs
+
+The project helps develop and improve cognitive functions, such as the ability to quickly memorize visual information and accurately reproduce it, which is useful for anyone who wants to maintain or improve their memory and concentration.
+
+* When turned on, a start message appears on the display.
+
+* Pressing *MS1* starts the countdown (for 3 seconds).
+
+* Then, 6 randomly selected *LED* LEDs start to light up.
+
+* After the lights turn off, the user reproduces the sequence by pressing the corresponding *S* buttons.
+
+* *MS3* cancels the last press.
+
+* *MS4* shows a hint or the result if the user pressed the correct number of buttons.
+
+* *MS2* resets the current progress and returns to the start screen.
+
+* The result is displayed as a percentage of matches and the number of correct answers.
+
+The main logic of the test is implemented in the `main.ino` file.  
+Additional modules for debugging and visualization:
+
+- `readButtonData.ino` — reads and outputs information about the pressed buttons (*S*) to Serial
+
+- `displayButtonData.ino` — displays information about button presses in real time on the *OLED* display.
+
+- `showLEDs.ino` — responsible for generating and displaying random *LED* patterns.
+
+Key parameters can be configured in the code:
+
+- `n` — number of *LED* lights that light up
+- `beforeStartInterval` - countdown time before start
+- `showLEDsInterval` - duration of *LED* illumination
+- `showResultInterval` - message display time
+
+Regular training with **Brain Train** helps:
+
+- Improve concentration and attention span  
+- Increase the speed of visual information processing  
+- Develop short-term memory  
+- Maintain brain activity and cognitive functions in good shape  
+
+This project is ideal for those who want to maintain mental acuity, as well as older people who care about preserving their memory.
+
+Author: Robert Bitlev
+
+Mentor: P.N. Romanko
+
+---
+
+The **Brain Train** project is an educational and entertainment project and is not intended for the diagnosis, treatment, or prevention of any disease. Use of the device does not replace consultation with a doctor or specialist. Before starting any training, especially if you have medical contraindications, it is recommended that you consult a qualified specialist. The author of the project is not responsible for any consequences associated with the use of this trainer.
+
+# RU:
+
+## Brain Train
 
 Проект был выполнен в рамках обучения по дополнительной общеразвивающей программе «Творческая радиоэлектроника», проходившей в Академии Цифровых Технологий (2023 - 2024 гг.)
 
